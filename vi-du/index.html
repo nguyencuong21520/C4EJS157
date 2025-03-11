@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới Thiệu Bản Thân</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(45deg, #FF6B6B, #4ECDC4, #45B7D1);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            padding: 40px;
+            max-width: 800px;
+            width: 100%;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+        }
+
+        .profile-header {
+            text-align: center;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 5px solid #FF6B6B;
+            box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .profile-image:hover {
+            transform: scale(1.05);
+        }
+
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+            background: linear-gradient(to right, #FF6B6B, #4ECDC4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .title {
+            color: #6c5ce7;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .section {
+            margin-bottom: 30px;
+            transition: transform 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+        }
+
+        h2 {
+            color: #FF6B6B;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+            border-bottom: 2px solid #4ECDC4;
+            padding-bottom: 10px;
+        }
+
+        p {
+            color: #34495e;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-tag {
+            background: linear-gradient(45deg, #6c5ce7, #a367dc);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(108, 92, 231, 0.2);
+        }
+
+        .skill-tag:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(108, 92, 231, 0.4);
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .contact-item {
+            color: white;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            background: linear-gradient(45deg, #FF6B6B, #ee5253);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(238, 82, 83, 0.2);
+        }
+
+        .contact-item:nth-child(2) {
+            background: linear-gradient(45deg, #4ECDC4, #45B7D1);
+            box-shadow: 0 4px 15px rgba(78, 205, 196, 0.2);
+        }
+
+        .contact-item:nth-child(3) {
+            background: linear-gradient(45deg, #6c5ce7, #a367dc);
+            box-shadow: 0 4px 15px rgba(108, 92, 231, 0.2);
+        }
+
+        .contact-item:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+
+            .profile-image {
+                width: 150px;
+                height: 150px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .contact-item {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="profile-header">
+            <img src="https://placehold.co/200x200" alt="Ảnh đại diện" class="profile-image">
+            <h1>Nguyễn Văn A</h1>
+            <div class="title">Lập Trình Viên Web</div>
+        </div>
+
+        <div class="section">
+            <h2>Giới Thiệu</h2>
+            <p>
+                Xin chào! Tôi là một lập trình viên đam mê công nghệ và phát triển web. 
+                Với kinh nghiệm trong việc xây dựng các ứng dụng web hiện đại, 
+                tôi luôn tìm kiếm cơ hội để học hỏi và phát triển bản thân.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>Kỹ Năng</h2>
+            <div class="skills">
+                <span class="skill-tag">HTML5</span>
+                <span class="skill-tag">CSS3</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">React</span>
+                <span class="skill-tag">Node.js</span>
+                <span class="skill-tag">Git</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Kinh Nghiệm</h2>
+            <p>
+                • 2 năm kinh nghiệm phát triển web frontend<br>
+                • Đã tham gia nhiều dự án với các công nghệ hiện đại<br>
+                • Làm việc hiệu quả trong môi trường nhóm
+            </p>
+        </div>
+
+        <div class="contact-info">
+            <a href="mailto:example@email.com" class="contact-item">Email</a>
+            <a href="tel:+84123456789" class="contact-item">Điện thoại</a>
+            <a href="#" class="contact-item">LinkedIn</a>
+        </div>
+    </div>
+</body>
+</html> 
