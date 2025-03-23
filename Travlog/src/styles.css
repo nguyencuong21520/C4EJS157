@@ -1,0 +1,443 @@
+/* Reset và base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-purple: #7B61FF;
+    --color-grey: #39425D;
+    --color-pink: #FF6B6B;
+    --color-white: #FFFFFF;
+    --color-border: #EEEEEE;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--color-grey);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Typography */
+h1 {
+    font-family: 'Circular STD', sans-serif;
+    font-weight: bold;
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin: 1rem 0;
+}
+
+h2 {
+    font-family: 'Circular STD', sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+    line-height: 1.2;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.5;
+    opacity: 0.8;
+}
+
+/* Navigation */
+.nav {
+    padding: 2.25rem 1rem;
+    background-color: var(--color-white);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-logo {
+    order: 1;
+    height: 40px;
+}
+
+.nav-menu-btn {
+    display: block;
+    order: 2;
+    cursor: pointer;
+    height: 24px;
+}
+
+.nav-menu {
+    display: none;
+    order: 2;
+}
+
+.nav-menu ul {
+    display: flex;
+    gap: 4rem;
+    list-style: none;
+}
+
+.nav-menu li {
+    font-family: 'Circular STD', sans-serif;
+    font-weight: bold;
+    font-size: 0.875rem;
+}
+
+.nav-menu a {
+    color: var(--color-grey);
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.nav-menu a:hover {
+    opacity: 0.8;
+}
+
+.nav-menu a.opacity-50 {
+    opacity: 0.5;
+}
+
+.nav-buttons {
+    display: none;
+    order: 3;
+    gap: 1rem;
+}
+
+.btn {
+    padding: 1rem 2rem;
+    font-weight: bold;
+    font-size: 0.875rem;
+    border-radius: 9999px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid var(--color-border);
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-white {
+    background-color: var(--color-white);
+    color: var(--color-grey);
+}
+
+.btn-purple {
+    background-color: var(--color-purple);
+    color: var(--color-white);
+    border: none;
+}
+
+/* Mobile Navigation */
+.mobile-nav {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-white);
+    border-top: 1px solid var(--color-border);
+    padding: 1rem;
+    z-index: 50;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-nav ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.mobile-nav button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: opacity 0.3s ease;
+}
+
+.mobile-nav button:hover {
+    opacity: 0.8;
+}
+
+.mobile-nav ion-icon {
+    font-size: 1.5rem;
+}
+
+.mobile-nav .text-purple {
+    color: var(--color-purple);
+}
+
+.mobile-nav .text-grey {
+    color: var(--color-grey);
+}
+
+.mobile-nav-buttons {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    justify-content: center;
+}
+
+/* Hero Section */
+.hero {
+    padding: 8rem 0 4rem;
+    background-color: #F8F9FA;
+}
+
+.hero-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    align-items: center;
+    gap: 2rem;
+}
+
+.hero-content {
+    grid-column: span 12;
+    order: 2;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin: 2rem 0;
+}
+
+.hero-content h1 span {
+    color: var(--color-pink);
+}
+
+.hero-content p {
+    max-width: 600px;
+    margin: 0 auto 2rem;
+}
+
+.hero-image {
+    grid-column: span 12;
+    order: 1;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.hero-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.hero-buttons button {
+    width: 100%;
+    max-width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.hero-partners {
+    grid-column: span 12;
+    order: 3;
+    padding: 2rem 0;
+}
+
+.partner-logos {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.partner-logos img {
+    height: 32px;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.partner-logos img:hover {
+    opacity: 1;
+}
+
+/* Services Section */
+.services {
+    padding: 4rem 0;
+    overflow-x: hidden;
+    background-color: var(--color-white);
+}
+
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 2rem;
+}
+
+.services-header {
+    grid-column: span 12;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.services-header span {
+    color: var(--color-pink);
+    font-weight: bold;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.services-cards {
+    grid-column: span 12;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.service-card {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: 32px;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-card.shadow {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.service-card img {
+    width: 80px;
+    height: 80px;
+}
+
+.service-card h2 {
+    font-weight: bold;
+    color: var(--color-grey);
+    font-size: 1.125rem;
+    text-align: center;
+}
+
+.service-card p {
+    color: var(--color-grey);
+    opacity: 0.5;
+    font-size: 1.125rem;
+    line-height: 1.5;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (min-width: 640px) {
+    .nav-menu-btn {
+        display: none;
+    }
+
+    .nav-buttons {
+        display: flex;
+    }
+
+    .hero-content {
+        order: 1;
+        text-align: left;
+    }
+
+    .hero-image {
+        order: 2;
+    }
+
+    .hero-buttons {
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    .services-cards {
+        flex-direction: row;
+    }
+
+    .service-card {
+        width: 350px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .nav-menu {
+        display: block;
+    }
+
+    .hero-content {
+        grid-column: span 4;
+    }
+
+    .hero-image {
+        grid-column: span 8;
+    }
+
+    .services-header {
+        grid-column: span 4;
+        text-align: left;
+    }
+
+    .services-cards {
+        grid-column: span 8;
+    }
+
+    h1 {
+        font-size: 3.5rem;
+    }
+}
+
+/* Transitions */
+.transition {
+    transition: all 0.3s ease;
+}
+
+.transition-opacity {
+    transition: opacity 0.3s ease;
+}
+
+.transition-transform {
+    transition: transform 0.3s ease;
+}
+
+/* Utilities */
+.text-purple {
+    color: var(--color-purple);
+}
+
+.text-pink {
+    color: var(--color-pink);
+}
+
+.text-grey {
+    color: var(--color-grey);
+}
+
+.opacity-50 {
+    opacity: 0.5;
+} 
